@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study MBBS Abroad | University Insights</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('/api/placeholder/1920/600') center/cover;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .country-card {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .country-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .process-step {
+            border-left: 3px solid #0d6efd;
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #e9ecef;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .invalid-feedback {
+            display: none;
+        }
+
+        .was-validated .form-control:invalid ~ .invalid-feedback {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Study MBBS Abroad</h1>
+            <p class="lead mb-4">Your Gateway to Global Medical Education</p>
+            <button class="btn btn-primary btn-lg px-5" onclick="scrollToForm()">Apply Now</button>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Study MBBS Abroad?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="bi bi-currency-dollar fs-4"></i>
+                        </div>
+                        <h3 class="h5">Affordable Education</h3>
+                        <p>Lower tuition fees compared to private medical colleges</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="bi bi-globe fs-4"></i>
+                        </div>
+                        <h3 class="h5">Global Recognition</h3>
+                        <p>WHO recognized universities and international exposure</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="bi bi-book fs-4"></i>
+                        </div>
+                        <h3 class="h5">Quality Education</h3>
+                        <p>Modern facilities and experienced faculty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countries Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Top Countries for MBBS</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card country-card h-100">
+                        <div class="card-body">
+                            <h3 class="h5">Russia 🇷🇺</h3>
+                            <ul class="list-unstyled">
+                                <li>✓ Affordable Education</li>
+                                <li>✓ Global Recognition</li>
+                                <li>✓ English Medium</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add similar cards for other countries -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Process Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Admission Process & Eligibility</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="process-step">
+                        <h3 class="h5">Step 1: Eligibility Check</h3>
+                        <p>Minimum 50% in PCB (Physics, Chemistry, Biology)</p>
+                    </div>
+                    <div class="process-step">
+                        <h3 class="h5">Step 2: Document Submission</h3>
+                        <p>Submit required documents including passport and marksheets</p>
+                    </div>
+                    <div class="process-step">
+                        <h3 class="h5">Step 3: University Selection</h3>
+                        <p>Choose from our partner universities</p>
+                    </div>
+                    <div class="process-step">
+                        <h3 class="h5">Step 4: Visa Process</h3>
+                        <p>Guidance for student visa application</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-5 bg-light" id="contactForm">
+        <div class="container">
+            <h2 class="text-center mb-5">Get in Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="leadForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                            <div class="invalid-feedback">Please enter your name</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">Please enter a valid email</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                            <div class="invalid-feedback">Please enter a valid phone number</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="country" class="form-label">Preferred Country</label>
+                            <select class="form-select" id="country" required>
+                                <option value="">Select a country</option>
+                                <option value="russia">Russia</option>
+                                <option value="uzbekistan">Uzbekistan</option>
+                                <option value="kazakhstan">Kazakhstan</option>
+                                <option value="philippines">Philippines</option>
+                                <option value="georgia">Georgia</option>
+                                <option value="kyrgyzstan">Kyrgyzstan</option>
+                                <option value="egypt">Egypt</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a country</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and Custom JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Form validation
+        (function () {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    } else {
+                        event.preventDefault()
+                        // Here you would typically send the form data to your server
+                        alert('Form submitted successfully!')
+                        form.reset()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+
+        // Smooth scroll to form
+        function scrollToForm() {
+            document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' })
+        }
+
+        // Google Analytics
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR-GA-ID');
+
+        // Facebook Pixel
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR-PIXEL-ID');
+        fbq('track', 'PageView');
+    </script>
+</body>
+</html>
